@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+    </style>
+</head>
+  
+<body>
+<div id="content">
+    <div class="info">
+    <h1 >Guess The Number</h1>
+    <hr>
+
+
+<p>We have selected a random number between 1 - 10.<Br> 
+See if you can guess it.</p>
+<P>Play with a friend and win:</P>
+<P>Win <b>R10</b> on <b>1st try</b>.</P>
+<P>Win <b>R5</b> on <b>2nd try</b>.</P>
+<P>Win <b>R3</b> on <b>3rd try</b>.</P>
+<P>Win <b>nothing </b> after failing <b>3rd</b> time</P>
+
+
+   
+<div class="form">
+    <label for="guessField">Enter a guess: </label>
+    <input type = "text" id = "guessField" class = "guessField">
+    
+    <input type = "submit" value = "Submit" 
+           class = "guessSubmit" id = "submitguess">  
+</div>
+
+<p id="print"></p>
+</div>
+</div>
+<script type = "text/javascript">
+  
+    // random value generated
+    var y = Math.floor(Math.random() * 10 + 1);
+      
+ 
+      
+    document.getElementById("submitguess").onclick = function(){ //click button
+      
+   // number guessed by user     
+   var x = document.getElementById("guessField").value;
+  
+   if(x == y)
+   {    
+       alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT");
+   }
+   else 
+   {    
+       alert("Oops!! Try again");
+   }
+
+}
+</script>
+</body>
+</html>                    
